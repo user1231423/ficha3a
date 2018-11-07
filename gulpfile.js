@@ -5,12 +5,12 @@ var browserSync = require('browser-sync').create();
 var purify = require('gulp-purifycss');
 
 //Detect when a change in .scss and .css is made and auto sync
-gulp.task('check-server',['sass'],function(){
+gulp.task('check-server',['compile-sass'],function(){
   browserSync.init({
     server: "dist"
   });
   gulp.watch("src/sass/*.scss",['compile-sass']);
-  gulp.watch("dist/css/*.css",['css']);
+  gulp.watch("dist/css/*.css",['clean-css']);
   gulp.watch("src/*.html",['move-html']);
   gulp.watch("src/*.html").on('change',browserSync.reload);
 });
@@ -23,19 +23,13 @@ gulp.task('compile-sass', function () {
     .pipe(browserSync.stream());
  });
 
- //Get Font Awesome fonts
- gulp.task('fonts', function() {
-  return gulp.src('node_modules/font-awesome/fonts/*')
-    .pipe(gulp.dest('src/assets/fonts'))
-})
-
 gulp.task('move-html', function() {
   gulp.src("src/*.html")
       .pipe(gulp.dest('dist/'));
 });
 
 //Remove all unused css
-gulp.task('css', function() {
+gulp.task('clean-css', function() {
   return gulp.src('dist/assets/css/style.css')
     .pipe(purify(['src/a*.css']))
     .pipe(gulp.dest('dist/assets/css/'))
