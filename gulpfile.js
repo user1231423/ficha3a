@@ -5,7 +5,7 @@ var browserSync = require('browser-sync').create();
 var purify = require('gulp-purifycss');
 
 //Detect when a change in .scss and .css is made and auto sync
-gulp.task('check-server',['compile-sass'],function(){
+gulp.task('check-server',function(){
   browserSync.init({
     server: "dist"
   });
@@ -19,7 +19,7 @@ gulp.task('check-server',['compile-sass'],function(){
 gulp.task('compile-sass', function () {
   return gulp.src('src/sass/main.scss')
     .pipe(sass())
-    .pipe(gulp.dest('dist/assets/css'))
+    .pipe(gulp.dest('dist/assets/css/main.css'))
     .pipe(browserSync.stream());
  });
 
@@ -30,8 +30,8 @@ gulp.task('move-html', function() {
 
 //Remove all unused css
 gulp.task('clean-css', function() {
-  return gulp.src('dist/assets/css/style.css')
-    .pipe(purify(['src/a*.css']))
-    .pipe(gulp.dest('dist/assets/css/'))
+  return gulp.src('dist/assets/css/main.css')
+    .pipe(purify(['src/*.css']))
+    .pipe(gulp.dest('dist/assets/css/main.css'))
     .pipe(browserSync.stream());
 });
