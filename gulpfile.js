@@ -9,16 +9,17 @@ gulp.task('check-server',['sass'],function(){
   browserSync.init({
     server: "dist"
   });
-  gulp.watch("src/assets/scss/*.scss",['sass']);
+  gulp.watch("src/sass/*.scss",['compile-sass']);
+  gulp.watch("dist/css/*.css",['css']);
   gulp.watch("src/*.html",['move-html']);
   gulp.watch("src/*.html").on('change',browserSync.reload);
 });
 
 //Compile scss into css
-gulp.task('sass', function () {
-  return gulp.src('src/assets/scss/style.scss')
+gulp.task('compile-sass', function () {
+  return gulp.src('src/sass/main.scss')
     .pipe(sass())
-    .pipe(gulp.dest('src/dist/assets/css'))
+    .pipe(gulp.dest('dist/assets/css'))
     .pipe(browserSync.stream());
  });
 
@@ -33,10 +34,10 @@ gulp.task('move-html', function() {
       .pipe(gulp.dest('dist/'));
 });
 
- //Remove all unused css
-/* gulp.task('css', function() {
+//Remove all unused css
+gulp.task('css', function() {
   return gulp.src('dist/assets/css/style.css')
     .pipe(purify(['src/a*.css']))
     .pipe(gulp.dest('dist/assets/css/'))
     .pipe(browserSync.stream());
-}); */
+});

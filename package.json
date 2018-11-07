@@ -1,11 +1,29 @@
 {
-  "name": "ficha3a",
+  "name": "ficha3",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Ficha 3a",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/user1231423/ficha3a.git"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "João Gouveia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/user1231423/ficha3a/issues"
+  },
+  "homepage": "https://ficha3a.com/index.html",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "node-sass": "^4.10.0",
+    "gulp-sass": "^4.0.2",
+    "browser-sync": "^2.26.3",
+    "gulp-purifycss": "^0.2.0"
+  }
 }
