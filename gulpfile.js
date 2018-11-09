@@ -24,7 +24,7 @@ gulp.task('compile-sass', function () {
  });
 
 gulp.task('move-html', function() {
-  gulp.src("src/index.html")
+  gulp.src("src/*.html")
       .pipe(gulp.dest('dist/'));
 });
 
