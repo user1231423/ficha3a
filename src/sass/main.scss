@@ -26,8 +26,14 @@ body{
 
 .quadrado{
     background-color: $color--base;
-    $__foto{
+    &__foto{
         color: green;
     }
-    
+    &__texto{
+        color: blue;
+    }
+    &_botoes{
+        color: yellow;
+    }
+
 }

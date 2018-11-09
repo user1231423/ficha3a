@@ -19,12 +19,12 @@ gulp.task('check-server',function(){
 gulp.task('compile-sass', function () {
   return gulp.src('src/sass/main.scss')
     .pipe(sass())
-    .pipe(gulp.dest('dist/assets/css/main.css'))
+    .pipe(gulp.dest('dist/assets/css/'))
     .pipe(browserSync.stream());
  });
 
 gulp.task('move-html', function() {
-  gulp.src("src/*.html")
+  gulp.src("src/index.html")
       .pipe(gulp.dest('dist/'));
 });
 
@@ -32,6 +32,6 @@ gulp.task('move-html', function() {
 gulp.task('clean-css', function() {
   return gulp.src('dist/assets/css/main.css')
     .pipe(purify(['src/*.css']))
-    .pipe(gulp.dest('dist/assets/css/main.css'))
+    .pipe(gulp.dest('dist/assets/css/'))
     .pipe(browserSync.stream());
 });
