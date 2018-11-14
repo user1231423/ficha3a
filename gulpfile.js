@@ -35,3 +35,10 @@ gulp.task('clean-css', function() {
     .pipe(gulp.dest('dist/assets/css/'))
     .pipe(browserSync.stream());
 });
+
+/* //Get fonts
+gulp.task('fonts', function() {
+  return gulp.src([
+      'node_modules/font-awesome/css/font-awesome.min.css'])
+      .pipe(gulp.dest('dist/assets/fonts/'));
+}); */

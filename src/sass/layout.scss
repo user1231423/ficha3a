@@ -23,3 +23,17 @@ header{
 .residencia-view{
     flex: 1;
 }
+
+.fa-6{
+    font-size: 2rem !important;
+}
+
+header{
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-grey-light-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
