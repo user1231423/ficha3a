@@ -22,10 +22,16 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 20rem;
+    height: 50rem;
 }
 
 .residencia-view{
     flex: 80rem;
+}
+
+.fa-5{
+    margin-right: 1.25rem;
 }
 
 .fa-6{
