@@ -12,7 +12,32 @@
 <body>
     <div class="container">
         <header>
-            texto
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Pesquisar Residências">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use href=assets/iconmoon.svg#icon-magnifying-glass"></use>
+                    </svg>                
+                </button>
+            </form>
+            <nav class="user-nav">
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="assets/symbol-defs.svg#icon-bookmark"></use>
+                    </svg>
+                    <span class="user-nav__notification">7</span>
+                </div>
+                <div class="user-nav__icon-box">
+                    <svg class="user-nav__icon">
+                        <use xlink:href="assets/symbol-defs.svg#icon-chat"></use>
+                    </svg>
+                    <span class="user-nav__notification">13</span>
+                </div>
+                <div class="user-nav__user">
+                    <img src="user.jpg" alt="User photo" class="user-nav__user-photo">
+                    <span class="user-nav__user-name">Anónimo</span>
+                </div>
+            </nav>
         </header>
         <div class="content">
             <nav class="sidebar">
