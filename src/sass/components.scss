@@ -52,17 +52,78 @@
 
 //User Navigation
 .user-nav{
-    &_icon-box{}
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    &>*{
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &>*:hover{
+        background-color: var(--color-grey-light-2);
+    }
+    &_icon-box{
+        position: relative;
+    }
     &__icon{
         height: 2.25rem;
         width: 2.25rem;
+        fill: var(--color-grey-dark-2);
     }
-    &__notification{}
+    &__notification{
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+        color: #fff;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &_user{}
     &__user-photo{
         height: 3.75rem;
         border-radius: 50%;
-        margin-left: 1rem;
+        margin-right: 1rem;
     }
     &__user-name{}
+}
+
+//Side navigation
+.side-nav{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+    &__item{}
+    &__link:link,
+    &__link:visited{
+        color: var(--color-grey-light-1);
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 3rem;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+    }
+    &__icon{
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill: currentColor;
+    }
+}
+
+.legal{
+    font-size: 1.2rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+    padding: 2.5rem;
 }
