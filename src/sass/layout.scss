@@ -23,11 +23,11 @@ header{
     flex-direction: column;
     justify-content: space-between;
     max-width: 20rem;
-    height: 50rem;
 }
 
 .residencia-view{
-    flex: 80rem;
+    flex: 1;
+    background-color: #fff;
 }
 
 .fa-5{
@@ -45,5 +45,30 @@ header{
     border-bottom: 1px solid var(--color-grey-light-2);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.detail{
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+
+.description{
+    flex: 0 0 60%;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-right: 4.5rem;
+}
+
+.user-reviews{
+    flex: 1;
+    //background-color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
