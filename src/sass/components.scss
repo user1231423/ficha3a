@@ -8,7 +8,7 @@
 .search{
     @media only screen and (max-width: $bp-medium) {
         display: flex;
-        margin: 0;
+        margin-right: 2rem;
     }
     &__item{
         &:not(:last-child){
@@ -44,6 +44,9 @@
     align-items: center;
     justify-content: center;
     &__input{
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+        }
         font-family: inherit;
         font-size: inherit;
         color: inherit;
@@ -68,6 +71,9 @@
         background-color: var(--color-grey-light-3);
     }
     &__button{
+        @media only screen and (max-width: $bp-small) {
+            margin-left: 9px;
+        }
         border: none;
         background-color: var(--color-grey-light-2);
         &:focus{
@@ -114,14 +120,14 @@
         background-color: var(--color-primary);
         color: #fff;
         position: absolute;
-        top: 8.5rem;
-        right: 28rem;
+        top: 8.9rem;
+        right: 27rem;
         display: flex;
         justify-content: center;
         align-items: center;
         @media only screen and (max-width: $bp-small) {
-            top: 5.5rem;
-            right: 35rem;
+            top: 5.9rem;
+            right: 36rem;
         }
     }
     &_user{}
@@ -418,6 +424,9 @@
 }
 
 .marker{
+    @media only screen and (max-width: $bp-small) {
+        margin-left: 10px;
+    }
     color: var(--color-primary);
     margin-right: 10px;
 }
