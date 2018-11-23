@@ -26,6 +26,15 @@ header{
     display: flex;
 }
 
+#menu-icon {
+
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4C8FEC url(../img/menu-icon.png) center;
+
+}
+
 .sidebar{
     flex: 0 0 18%;
     background-color: var(--color-grey-dark-1);
@@ -38,6 +47,7 @@ header{
         max-width: 100%;
     }
 }
+
 
 .residencia-view{
     flex: 1;
