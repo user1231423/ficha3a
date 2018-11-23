@@ -4,12 +4,22 @@
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 header{
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;
+    }
 }
 
 .content{
@@ -23,6 +33,10 @@ header{
     flex-direction: column;
     justify-content: space-between;
     max-width: 20rem;
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+        max-width: 100%;
+    }
 }
 
 .residencia-view{
@@ -71,4 +85,47 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+//Media querys
+.container{
+    @media only screen and (max-width: $bp-largest){
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+header{
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        align-content: space-around;
+        height: 11rem;;
+    }
+}
+
+.content{
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+
+.detail{
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}
+
+.description{
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }

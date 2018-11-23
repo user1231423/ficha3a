@@ -6,6 +6,39 @@
 
 //Search
 .search{
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
+    &__item{
+        &:not(:last-child){
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+        }
+    }
+    &__link:link,
+    &__link::visited{
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
+    }
+    &__icon{
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
     flex: 0 0 40%;
     display: flex;
     align-items: center;
@@ -150,6 +183,9 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 
@@ -158,11 +194,13 @@
     display: flex;
     &__photo{
         width: 100%;
-        display: block;
-        min-width: 20rem;
+        display: flex;
         max-width: 20rem;
         min-height: 20rem;
         max-height: 20rem;
+        @media only screen and (max-width: $bp-small) {
+            min-height: 10rem;
+        }
     }
 }
 
@@ -177,6 +215,10 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
     }
     &__stars{
         margin-right: auto;
@@ -206,15 +248,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
     }
     &__rating-average{
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+        }
     }
     &__rating-count{
         font-size: .8rem;
         text-transform: uppercase;
+        @media only screen and (max-width: $bp-small) {
+            font-size: .5rem;
+        }
     }
 }
 
@@ -281,7 +332,7 @@
     }
 }
 
-.recomend{
+.recommend{
     font-size: 1.3rem;
     color: var(--color-grey-dark-3);
     display: flex;
@@ -306,6 +357,10 @@
 
 //Reviews
 .review{
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding: 3rem;
@@ -341,9 +396,7 @@
         color: var(--color-grey-dark-3);
     }
     &__rating{
-        color: var(--color-primary);
-        font-size: 2.2rem;
-        font-weight: 300;
+        color: var(--color-p);
     }
     &::before{
         content: "\201C";
